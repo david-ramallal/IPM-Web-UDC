@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciudad de A Coruña</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header><h1>A Coruña</h1></header>
+
+    <article>
+        <h2>La ciudad herculina</h2>
+        <p>
+            A Coruña tanto en gallego como en castellano, es una ciudad y un municipio de España situado en la comunidad autónoma de Galicia, capital de la provincia homónima. 
+            Importante puerto histórico, se sitúa en la costa noroeste de la península ibérica, en las Rías Altas. El centro de la ciudad se extiende sobre una península unida a tierra firme por un estrecho istmo, por lo que presenta dos fachadas marítimas distintas: la portuaria (hacia la ría de A Coruña) y otra de mar abierto, hacia la ensenada del Orzán, y sobre la que se extienden las principales playas urbanas (Riazor y Orzán).
+        </p>
+        <ul id="list" class="results_list" aria-live="polite">
+            <li>
+                <img src="img/torreHercules.jpg" alt="Imagen de la Torre de Hércules">
+                <span>Torre de Hércules</span>
+                <span>Evento: Visita Guiada</span>
+                <p>Fecha: 2023-01-05</p>
+                <p>Tipo de Evento: 2</p>
+            </li>
+            <li>
+                <img src="img/riazor.jpg" alt="Imagen del Estadio de Riazor">
+                <span>Estadio de Riazor</span>
+                <span>Evento: Torneo Teresa Herrera</span>
+                <p>Fecha: 2023-08-13</p>
+                <p>Tipo de Evento: 1</p>
+            </li>
+            <li>
+                <img src="img/mariaPita.jpg" alt="Imagen de la Plaza de María Pita">
+                <span>Plaza de María Pita</span>
+                <span>Evento: Mercado de Navidad</span>
+                <p>Fecha: 2022-12-25</p>
+                <p>Tipo de Evento: 3</p>
+            </li>
+        </ul>
+    </article>
+
+    <form class="form" id="form">
+        <div id="div_form">
+
+        <!--event group-->
+        <div class="form__group" id="event__group">
+            <label for="event" class="form__label">Buscar evento (campo obligatorio):</label>
+            <div class="form__input-group">
+                <input type="text" class="form_input" name="event" id="event" placeholder="event" required aria-required="true" aria-errormessage="invalid_event">
+                <i class="form_validation-state fas fa-times-circle"></i>
+            </div>
+            <p id="invalid_event" class="form_input-error">Introduzca un evento válido</p>
+        </div>
+
+        <!--date group-->
+        <div id="date__group">
+            <label for="fecha">Fecha evento:</label>
+            <input type="date" id="fecha">
+        </div>
+        <!--type group-->
+        <div class="form__group" id="type__group">
+            <label for="type" class="form__label">Tipo de evento (campo obligatorio):</label>
+            <div class="form__input-group">
+                <input type="number" class="form_input" name="type" id="type" placeholder="type" required aria-required="true" aria-errormessage="invalid_type">
+                <i class="form_validation-state fas fa-times-circle"></i>
+            </div>
+            <p id="invalid_type" class="form_input-error">Seleccione un tipo de evento</p>
+        </div>
+
+        <!--place group-->
+        <div id="place__group">
+            <label id="opcions">Lugar de celebración:</label>
+            <select name="lugar" id="place">
+                <option value="orzan">Orzán</option>
+                <option value="marina">La Marina</option>
+                <option value="ppon">Plaza de Pontevedra</option>
+            </select>
+        </div>
+        </div>
+
+
+        <div class = "form__group form__send-button">
+            <button type="submit" class="form__button">Buscar</button>
+            <p class="form__exit-message" id="form__exit-message"></p>
+        </div>
+
+        <div class="form_error-message" id="form_error-message">
+            <p><i class="fas fa-exclamation-triangle"></i> <b>Error: </b>Por favor rellene el formulario
+            </div>
+
+    </form>
+
+    <footer>
+        <h3>Práctica 3 de IPM</h3>
+        <p>UDC</p>
+        <ul class="authors">
+            <li class="name"><p>Yago Fernández Rego</p></li>
+            <li class="name"><p>Alfredo Javier Freire Bouzas</p></li>
+            <li class="name"><p>David García Ramallal</p></li>
+        </ul>
+    </footer>
+
+    <script src = "web.js"></script>
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+    
+</body>
+</html>
